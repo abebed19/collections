@@ -33,6 +33,32 @@ public class Main{
 
         System.out.println("List of keys "+ map.keySet());
 
+        //we can also remove keys values from a map
+        //
+        System.out.println("Three");
+
+
+        //we van create maps using factory methods
+        //
+        //
+        //
+
+
+        Map<Integer, String> abe = Map.ofEntries(
+                Map.entry(1,"Abebe"),
+                Map.entry(2,"Genet"),
+                Map.entry(3,"Ananaya"),
+                Map.entry(4,"Noah"),
+                Map.entry(5,"Aaron")
+                );
+
+       // System.out.println("Map before = " + abe);
+        //abe = new HashMap<>(abe);
+       // abe.values().remove("Abebe");
+       // System.out.println("map After = " + abe );
+
+      abe.forEach((key,value)->System.out.println(key + "::"+ value));
+
     
     }
 }
