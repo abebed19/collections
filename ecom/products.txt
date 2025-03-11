@@ -1,0 +1,11 @@
+ID	Name	Category	Price	Stock Quantity
+1	Laptop	Electronics	1200.99	10
+2	Smartphone	Electronics	699.5	20
+3	Headphones	Accessories	150.75	15
+4	Tablet	Electronics	399.99	8
+5	Smartwatch	Wearables	199.99	25
+6	Keyboard	Accessories	49.99	30
+7	Mouse	Accessories	29.99	40
+8	Monitor	Electronics	249.99	12
+9	External Hard Drive	Storage	89.99	18
+10	USB Flash Drive	Storage	19.99	50
