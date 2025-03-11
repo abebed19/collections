@@ -7,11 +7,12 @@ import java.util.List;
 
 public class Main{
     public static ProductManager manage; 
+    static Scanner input;
     public static void main(String[] args){
 
 
 
-        Scanner input = new Scanner(System.in);  
+        input = new Scanner(System.in);  
         //reading user Prefernce 
         manage = new ProductManager();
         populateDataFromFile();
@@ -21,9 +22,11 @@ public class Main{
 
         System.out.println("-------What is your choice------");
         System.out.println("1  to add new product");
-        System.out.println("2  ot display all list of products");
+        System.out.println("2  to display all list of products");
         System.out.println("3  to display all unique products");
         System.out.println("4  to display all Key value paired products");
+        System.out.println("5  to find product by id");
+
 
         int ch = input .nextInt();
         switch(ch){
@@ -40,10 +43,12 @@ public class Main{
                  manage.findUniqueProducts();
                  break;
             case 4: 
-                 System.out.println("----- Please provide product id to remove from all the databasess----");
-                 int productId = input.nextInt();
+                 int productId = readProductId();
                  manage.removeProduct(productId);
                  break;
+            case 5:
+                 int productI =readProductId();
+                 System.out.println(manage.findProductById(productI));
             default:
                  System.out.println("Unknow operator please provide form the listed ones");
                  
@@ -63,6 +68,13 @@ public class Main{
 
    
 
+
+    public static int readProductId(){
+        System.out.println("----- Please provide product id to make an operation----");
+        int productId = input.nextInt();
+        return productId;
+
+    }
 
     public static Product productReader(){
 
